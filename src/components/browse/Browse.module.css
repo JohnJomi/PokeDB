@@ -178,3 +178,19 @@
     overflow: visible;
   }
 }
+
+@media (max-width: 599px) {
+  .list {
+    padding-inline: 0 6px;
+  }
+  .row {
+    gap: 6px;
+    padding: 6px;
+  }
+  .cursor {
+    display: none;
+  }
+  .info {
+    font-size: var(--text-label);
+  }
+}
