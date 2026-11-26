@@ -1,0 +1,117 @@
+.tabs,
+.stepper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.stepper {
+  display: none;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.columns > * {
+  flex: 1 1 440px;
+  min-width: 0;
+}
+
+.name {
+  font-size: var(--text-name);
+  font-weight: 400;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+.genus {
+  font-size: 9px;
+  text-transform: uppercase;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.facts {
+  font-size: var(--text-label);
+  text-transform: uppercase;
+}
+.facts div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 3px dotted var(--ink);
+}
+.facts dd {
+  text-align: right;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.stat {
+  display: grid;
+  grid-template-columns: 90px 36px 1fr;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-label);
+  text-transform: uppercase;
+}
+.stat dd {
+  text-align: right;
+}
+.track {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--ink);
+}
+.track span {
+  flex: 1;
+  height: 14px;
+  background: var(--stat-empty);
+}
+.track span[data-filled] {
+  background: currentColor;
+}
+
+.matchups {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.matchups h3 {
+  margin-bottom: 6px;
+  font-size: var(--text-label);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@media (max-width: 959px) {
+  .columns {
+    flex-direction: column;
+  }
+  .columns > * {
+    flex: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .stepper {
+    display: flex;
+  }
+  .stat {
+    grid-template-columns: 76px 30px 1fr;
+    gap: 6px;
+    font-size: 9px;
+  }
+  .track {
+    gap: 1px;
+  }
+}
