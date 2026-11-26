@@ -1,5 +1,6 @@
 .badge {
   display: inline-flex;
+  font-family: var(--font-pixel), monospace;
   align-items: center;
   gap: 6px;
   padding: 5px 8px;
