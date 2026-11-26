@@ -19,11 +19,16 @@ npx playwright install chromium
 
 | Script | Purpose |
 |---|---|
+| `npm run data` | Fetch the pinned sources and regenerate data and sprites |
 | `npm run lint` | ESLint |
 | `npm run typecheck` | Route types and TypeScript |
 | `npm test` | Unit tests (Vitest) |
 | `npm run test:e2e` | End-to-end tests (Playwright, after `npm run build`) |
 | `npm run build` | Production build |
+
+## Data
+
+`data/`, `public/data/` and `public/sprites/` are generated from pinned commits of [PokeAPI/pokeapi](https://github.com/PokeAPI/pokeapi) and [PokeAPI/sprites](https://github.com/PokeAPI/sprites) and committed, so deploying only needs `next build`. To update, change the commit in `scripts/fetch-source.mjs`, run `npm run data`, test and review the diff. Their licence notices are in [`licenses/`](licenses).
 
 ## Disclaimer
 

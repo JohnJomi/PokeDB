@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "data:fetch": "node scripts/fetch-source.mjs",
+    "data": "npm run data:fetch && node scripts/build-data.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
