@@ -12,6 +12,9 @@ Requires Node.js 22.12 or later (CI uses Node 24).
 ```bash
 npm install
 npm run dev
+
+# once, before running the end-to-end tests
+npx playwright install chromium
 ```
 
 | Script | Purpose |
