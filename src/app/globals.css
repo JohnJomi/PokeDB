@@ -1,0 +1,68 @@
+@import "../styles/tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  /* 2px grid lines every 32px */
+  background-image:
+    linear-gradient(#ffffff0d 2px, transparent 2px),
+    linear-gradient(90deg, #ffffff0d 2px, transparent 2px);
+  background-size: 32px 32px;
+  color: var(--white);
+  font-family: var(--font-pixel), monospace;
+  font-size: var(--text-ui);
+  line-height: 2;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+:focus-visible {
+  outline: 4px solid var(--white);
+  box-shadow: 0 0 0 8px var(--ink);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
