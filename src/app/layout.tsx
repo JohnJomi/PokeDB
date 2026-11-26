@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Press_Start_2P, VT323 } from "next/font/google";
+import { Stars } from "@/components/ui/Stars";
 import "./globals.css";
 import styles from "./layout.module.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${pixel.variable} ${readable.variable}`}>
       <body>
+        <Stars />
         <main className={styles.main}>{children}</main>
         <footer className={styles.footer}>
           Unofficial fan project. Pokémon names and images belong to their respective owners.

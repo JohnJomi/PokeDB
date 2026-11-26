@@ -1,0 +1,21 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  background: var(--type-bg);
+  color: var(--type-fg);
+  border: 3px solid var(--ink);
+  box-shadow:
+    inset 3px 3px 0 #ffffff33,
+    inset -3px -3px 0 #00000026;
+  font-size: var(--text-label);
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.multiplier {
+  padding-left: 6px;
+  border-left: 2px solid currentColor;
+}

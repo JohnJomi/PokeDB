@@ -45,7 +45,7 @@ img {
 
 :focus-visible {
   outline: 4px solid var(--white);
-  box-shadow: 0 0 0 8px var(--ink);
+  box-shadow: 0 0 0 8px var(--ink) !important;
 }
 
 .visually-hidden {
