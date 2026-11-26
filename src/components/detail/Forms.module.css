@@ -1,0 +1,29 @@
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--cream);
+  border: 4px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  text-align: center;
+  text-transform: uppercase;
+}
+.card h3 {
+  font-size: var(--text-label);
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
