@@ -1,0 +1,19 @@
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--ink);
+}
+
+.title {
+  color: var(--cream);
+  font-size: var(--text-ui);
+  font-weight: 400;
+}
+
+.value {
+  color: var(--yellow);
+  font-size: var(--text-ui);
+}

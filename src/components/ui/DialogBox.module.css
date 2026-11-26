@@ -1,0 +1,30 @@
+.dialog {
+  position: relative;
+  padding: 24px;
+  background: var(--cream);
+  color: var(--ink);
+  border: 5px solid var(--ink);
+  box-shadow:
+    inset 0 0 0 4px var(--cream),
+    inset 0 0 0 7px var(--shell);
+}
+
+.text {
+  font-family: var(--font-readable), monospace;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.marker {
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  font-size: var(--text-label);
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
