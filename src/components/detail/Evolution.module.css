@@ -1,0 +1,73 @@
+.branch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 190px;
+  max-width: 100%;
+  padding: 8px;
+  background: var(--cream);
+  border: 4px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.card[aria-current] {
+  background: var(--yellow);
+}
+.stage {
+  font-size: 9px;
+}
+.method {
+  font-family: var(--font-readable), monospace;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+.arrow::before {
+  content: "▶";
+}
+
+.children,
+.grid {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  flex: 1;
+  justify-items: center;
+}
+
+.none {
+  text-align: center;
+  font-size: var(--text-label);
+}
+
+@media (max-width: 959px) {
+  .branch {
+    flex-direction: column;
+  }
+  .arrow::before {
+    content: "▼";
+  }
+  .grid {
+    display: flex;
+    flex: none;
+  }
+}

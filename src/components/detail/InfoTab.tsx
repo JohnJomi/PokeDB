@@ -5,6 +5,7 @@ import { SpriteStage } from "@/components/ui/SpriteStage";
 import { TypeBadge } from "@/components/ui/TypeBadge";
 import { formatNumber } from "@/lib/filter";
 import type { Pokemon, Stats } from "@/lib/types";
+import { Evolution } from "./Evolution";
 import { StatBar } from "./StatBar";
 import { TypeMatchups } from "./TypeMatchups";
 import styles from "./Detail.module.css";
@@ -60,6 +61,7 @@ export function InfoTab({ pokemon, shiny }: { pokemon: Pokemon; shiny: boolean }
         </LcdScreen>
       </div>
       <DialogBox>{pokemon.description}</DialogBox>
+      <Evolution tree={pokemon.evolution} current={id} />
     </>
   );
 }
