@@ -1,0 +1,61 @@
+:root {
+  /* Core colours (docs/design.md §2) */
+  --ink: #1b1426;
+  --bg: #241a45;
+  --shell: #e0443a;
+  --shell-light: #ff7261;
+  --shell-dark: #a52a2a;
+  --shell-screw: #ffb3a7;
+  --grille-shadow: #ff8a78;
+  --screen: #d8efb0;
+  --screen-line: #cfe6a5;
+  --screen-shadow: #7d9a58;
+  --cream: #fff4d6;
+  --yellow: #ffcc33;
+  --blue: #6fd3ff;
+  --purple: #7c3aed;
+  --panel: #38304a;
+  --bezel: #4a4458;
+  --bezel-light: #6d6580;
+  --bezel-dark: #2d2838;
+  --pink: #ff7ad9;
+  --white: #ffffff;
+
+  /* Stat bars */
+  --stat-hp: #5ee06a;
+  --stat-atk: #ffcc33;
+  --stat-def: #ff9a3d;
+  --stat-spa: #ff5d5d;
+  --stat-spd: #5ab8ff;
+  --stat-spe: #ff7ad9;
+  --stat-empty: #443a57;
+
+  /* Type sizes */
+  --text-name: 20px;
+  --text-title: 14px;
+  --text-ui: 11px;
+  --text-label: 10px;
+  --text-long: 20px;
+
+  --page-max: 1120px;
+}
+
+/* Type colours, selected through data-type */
+[data-type="normal"] { --type-bg: #c9bfa5; --type-fg: var(--ink); }
+[data-type="fire"] { --type-bg: #ff7a2f; --type-fg: var(--ink); }
+[data-type="water"] { --type-bg: #3d9bff; --type-fg: var(--ink); }
+[data-type="grass"] { --type-bg: #5ecb5a; --type-fg: var(--ink); }
+[data-type="electric"] { --type-bg: #ffd426; --type-fg: var(--ink); }
+[data-type="ice"] { --type-bg: #9be7f0; --type-fg: var(--ink); }
+[data-type="fighting"] { --type-bg: #b83a2e; --type-fg: var(--white); }
+[data-type="poison"] { --type-bg: #8e44ad; --type-fg: var(--white); }
+[data-type="ground"] { --type-bg: #d9a752; --type-fg: var(--ink); }
+[data-type="flying"] { --type-bg: #a9c4ff; --type-fg: var(--ink); }
+[data-type="psychic"] { --type-bg: #ff6f9f; --type-fg: var(--ink); }
+[data-type="bug"] { --type-bg: #a8c020; --type-fg: var(--ink); }
+[data-type="rock"] { --type-bg: #b59b55; --type-fg: var(--ink); }
+[data-type="ghost"] { --type-bg: #5a4a8f; --type-fg: var(--white); }
+[data-type="dragon"] { --type-bg: #4b4fd1; --type-fg: var(--white); }
+[data-type="dark"] { --type-bg: #5a4a42; --type-fg: var(--white); }
+[data-type="steel"] { --type-bg: #b8c4d4; --type-fg: var(--ink); }
+[data-type="fairy"] { --type-bg: #ff9ccb; --type-fg: var(--ink); }
