@@ -3,9 +3,11 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { PixelButton } from "@/components/ui/PixelButton";
 import type { Pokemon } from "@/lib/types";
+import { FormsTab } from "./FormsTab";
+import { MovesTab } from "./MovesTab";
 import styles from "./Detail.module.css";
 
-const TABS = ["info"] as const;
+const TABS = ["info", "moves", "forms"] as const;
 type Tab = (typeof TABS)[number];
 
 interface Props {
@@ -15,7 +17,7 @@ interface Props {
 }
 
 /** The only component that reads ?tab=, so the rest stays prerendered. */
-export function TabbedContent({ info, actions }: Props) {
+export function TabbedContent({ pokemon, info, actions }: Props) {
   const router = useRouter();
   const requested = useSearchParams().get("tab") as Tab;
   const tab = TABS.includes(requested) ? requested : "info";
@@ -35,7 +37,9 @@ export function TabbedContent({ info, actions }: Props) {
         ))}
         {actions}
       </div>
-      {info}
+      {tab === "info" && info}
+      {tab === "moves" && <MovesTab id={pokemon.id} />}
+      {tab === "forms" && <FormsTab forms={pokemon.forms} />}
     </>
   );
 }
